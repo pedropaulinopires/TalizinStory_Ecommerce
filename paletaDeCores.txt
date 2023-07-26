@@ -1,0 +1,8 @@
+
+- #527DFA : azul claro
+- #2849AD : azul escuro
+- #FA886B : laranja
+- #A6FA39 : verde claro
+- #77AD31 : verde escuro
+
+- fonte open Sans padrão!
