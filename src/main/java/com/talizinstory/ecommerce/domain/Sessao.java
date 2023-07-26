@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -25,4 +27,7 @@ public class Sessao {
 
     @Column(nullable = false)
     private BooleanEnum destaque;
+
+    @ManyToMany(mappedBy = "sessoes")
+    private List<Produto> produtos;
 }
