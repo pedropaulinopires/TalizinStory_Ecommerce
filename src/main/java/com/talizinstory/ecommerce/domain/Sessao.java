@@ -19,7 +19,7 @@ public class Sessao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Length(min = 3, max = 100)
     @Column(unique = true, length = 100, nullable = false)

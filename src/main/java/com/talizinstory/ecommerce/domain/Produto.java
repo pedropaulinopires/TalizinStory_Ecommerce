@@ -25,7 +25,7 @@ public class Produto {
 
     @Size(min = 3, max = 150)
     @Column(nullable = false, unique = true, length = 150)
-    private String nomeProduto;
+    private String nome;
 
     @Column(nullable = false)
     private Integer quantidadeEstoque;
@@ -48,15 +48,15 @@ public class Produto {
     private String imagemPrincipal;
 
     @Column(nullable = false)
-    private List<String> imagensProduto;
+    private List<String> imagens;
 
     @Size(min = 5, max = 600)
     @Column(nullable = false, length = 600)
-    private String descricaoProduto;
+    private String descricao;
 
     @Size(min = 5, max = 600)
     @Column(nullable = false, length = 600)
-    private String caracteristicasProduto;
+    private String caracteristicas;
 
     @Column(nullable = false)
     private List<TipoEnvioEnum> tipoEnvio;

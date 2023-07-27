@@ -7,9 +7,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: false
 
 server:
-  port: 443
+  port: 8080
   error:
     include-binding-errors: ON_PARAM
