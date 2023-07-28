@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --azul_claro: #527dfa;
+  --azul_escuro: #2849ad;
+  --laranja: #fa886b;
+  --verde_claro: #a6fa39;
+  --verde_escuro: #77ad31;
+}
+
+/*header menu mobile*/
+.menuMobile{
+    width: 100%;
+    background-color: var(--azul_claro);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.opcoes{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    flex-wrap: nowrap;
+}
+
+/*imagens de opcoes*/
+.opcoes img{
+    width: 40px;
+    height: 40px;
+}
+
+.iconPessoa{
+    border: 2px solid white;
+    border-radius: 50%;
+}
