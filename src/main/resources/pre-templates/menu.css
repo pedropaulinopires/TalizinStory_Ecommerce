@@ -150,7 +150,7 @@ html{
     /*mudar quando active*/
     opacity: 0;
     pointer-events: none;
-    transition: opacity .3s ease-out;
+    transition: opacity .2s ease-out;
 
 }
 

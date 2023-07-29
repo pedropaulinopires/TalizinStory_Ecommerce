@@ -1,5 +1,7 @@
 const btnSessao = document.getElementById("btnSessao");
 const listaSessoesMobile = document.getElementById("listaSessoesMobile")
+const tabelaSessao = document.getElementById("tabelaSessao")
+
 const main = [...document.getElementsByTagName("main")]
 
 function fecharSessao(){
@@ -19,7 +21,10 @@ btnSessao.addEventListener("click",()=>{
     }
 })
 
-main.map(ele => ele.addEventListener("click",fecharSessao))
+main.map(ele => ele.addEventListener("click",fecharSessao));
+
+[...tabelaSessao.children].map(ele => ele.addEventListener("click",fecharSessao))
+
 
 
 
