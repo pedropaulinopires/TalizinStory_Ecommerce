@@ -5,6 +5,7 @@ const tabelaSessao = document.getElementById("tabelaSessao")
 const main = [...document.getElementsByTagName("main")]
 
 /*menu desktop*/
+const menuDesktop = document.getElementById("menuDesktop")
 const btnBuscaDesktop = document.getElementById("btnBuscaDesktop")
 const sessaoDesktop = document.getElementById("sessaoDesktop")
 const listaSessaoDesktop = document.getElementById("listaSessaoDesktop")
@@ -45,11 +46,15 @@ main.map(ele => ele.addEventListener("click",resetComponents));
 [...tabelaSessao.children].map(ele => ele.addEventListener("click",resetComponents));
 [...listaSessaoDesktop.children].map(ele => ele.addEventListener("click",resetComponents))
 
-
-
-
 btnBuscaDesktop.addEventListener("click",sessaoDesktopEvents)
-
-
-
 window.addEventListener("resize",resetComponents)
+window.addEventListener("scroll",() =>{
+    if (window.pageYOffset > 50) {
+        menuDesktop.style.padding = "0px 60px"
+        sessaoDesktop.style.top = "50px"
+        
+    } else {
+        menuDesktop.style.padding = "20px 60px"
+        sessaoDesktop.style.top = "90px"
+    }
+})
