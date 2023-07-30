@@ -7,18 +7,29 @@
     <title>Menu</title>
   </head>
   <body>
+    <!--menu mobile-->
     <header class="menuMobile">
-      <abbr title="home"><img src="TalizinStore-Menu.png" alt="Logo" /></abbr>
+      <abbr title="home"
+        ><a href="#"><img src="TalizinStore-Menu.png" alt="Logo" /></a
+      ></abbr>
       <span class="opcoes">
         <abbr title="perfil"
-          ><img src="person-icon.png" class="iconPessoa" alt="icone-pessoa"
-        /></abbr>
+          ><a href="#">
+            <img
+              src="person-icon.png"
+              class="iconPessoa"
+              alt="icone-pessoa"
+            /> </a
+        ></abbr>
         <abbr title="carrinho"
-          ><img src="carrinhoCompras-icon.png" alt="icone-carrinhoCompras"
-        /></abbr>
+          ><a href="#">
+            <img
+              src="carrinhoCompras-icon.png"
+              alt="icone-carrinhoCompras"
+            /> </a
+        ></abbr>
       </span>
     </header>
-
     <div class="pesquisaMobile">
       <input
         type="text"
@@ -32,10 +43,71 @@
         <div class="line2"></div>
         <div class="line3"></div>
       </span>
+      <div class="listaSessoesMobile" id="listaSessoesMobile">
+        <ul id="tabelaSessao">
+          <li><a href="#">Novos</a></li>
+          <li><a href="#">Usados</a></li>
+          <li><a href="#">kids</a></li>
+          <li><a href="#">Eletrônicos</a></li>
+          <li><a href="#">Novos</a></li>
+          <li><a href="#">Usados</a></li>
+          <li><a href="#">kids</a></li>
+          <li><a href="#">Eletrônicos</a></li>
+          <li><a href="#">Novos</a></li>
+          <li><a href="#">Usados</a></li>
+          <li><a href="#">kids</a></li>
+          <li><a href="#">Eletrônicos</a></li>
+        </ul>
+      </div>
     </div>
+    <!--end menu mobile-->
 
-    <div class="listaSessoesMobile" id="listaSessoesMobile">
-      <ul id="tabelaSessao">
+    <!--menu desktop-->
+    <header class="menuDesktop">
+      <span class="logo-busca"
+        ><abbr title="home"
+          ><a href="#"><img src="TalizinStore-Menu.png" alt="Logo" /></a
+        ></abbr>
+        <input
+          type="text"
+          name="nome"
+          id="inome"
+          placeholder="Buscar produto ..."
+        />
+        <button class="btnBuscaDesktop"></button>
+
+        <span class="btnSessaoDesktop" id="btnBuscaDesktop">
+          <span class="vTop">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </span>
+  
+          <span class="vBottom">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </span>
+        </span>
+      </span>
+      <span class="opcoes">
+        <abbr title="perfil"
+          ><a href="#">
+            <img
+              src="person-icon.png"
+              class="iconPessoa"
+              alt="icone-pessoa"
+            /> </a
+        ></abbr>
+        <abbr title="carrinho"
+          ><a href="#">
+            <img
+              src="carrinhoCompras-icon.png"
+              alt="icone-carrinhoCompras"
+            /> </a
+        ></abbr>
+      </span>
+    </header>
+    <div class="sessaoDesktop" id="sessaoDesktop">
+      <ul class="listaSessaoDesktop" id="listaSessaoDesktop">
         <li><a href="#">Novos</a></li>
         <li><a href="#">Usados</a></li>
         <li><a href="#">kids</a></li>
@@ -50,10 +122,15 @@
         <li><a href="#">Eletrônicos</a></li>
       </ul>
     </div>
+    <!--end menu desktop-->
+
     <main>
-      
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint cupiditate
+      quaerat est temporibus laudantium facere vero iure saepe, et, adipisci
+      consequatur, eos id laboriosam fugit dicta? Aspernatur magni ducimus
+      asperiores!
     </main>
 
-    <script defer src="btnSessaoScripts.js"></script>
+    <script defer src="menuScripts.js"></script>
   </body>
 </html>
