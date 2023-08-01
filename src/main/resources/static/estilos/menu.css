@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "open_sans-regular";
+}
+
+:root {
+  --azul_claro: #527dfa;
+  --azul_escuro: #2849ad;
+  --laranja: #fa886b;
+  --verde_claro: #a6fa39;
+  --verde_escuro: #77ad31;
+}
+
+@font-face {
+  font-family: "open_sans-regular";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "open_sans-semiBold";
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+
+ul {
+  font-size: 15px;
+}
+
+/*header menu mobile*/
+.menuMobile {
+  width: 100%;
+  background-color: var(--azul_claro);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+}
+
+/*imagens do menu*/
+.menuMobile img {
+  cursor: pointer;
+}
+
+/*opcoes do menu*/
+.opcoes {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+  flex-wrap: nowrap;
+}
+
+/*imagens de opcoes*/
+.opcoes img {
+  width: 40px;
+  height: 40px;
+}
+
+/*icone de pessoa*/
+.iconPessoa {
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* pesquisa mobile */
+.pesquisaMobile {
+  background-color: var(--azul_claro);
+  width: 100%;
+  position: relative;
+  height: 50px;
+  top: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.pesquisaMobile input {
+  height: 100%;
+  width: calc(100% - 50px);
+  border: none;
+  padding-left: 5px;
+  padding-right: 60px;
+  font-size: 17px;
+}
+
+/*btn busca*/
+.btnBusca {
+  background-image: url("../imagens-menu/busca-icon.png");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  position: relative;
+  left: -50px;
+  top: 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/*btnSessao*/
+.btnSessao {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  left: calc(100% - 50px);
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.btnSessao div {
+  background-color: white;
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.btnSessao.active .line1 {
+  transform: rotate(45deg) translate(8px, 7px);
+}
+
+.btnSessao.active .line2 {
+  opacity: 0;
+}
+
+.btnSessao.active .line3 {
+  transform: rotate(-45deg) translate(4px, -3px);
+}
+
+/*listaSessao*/
+.listaSessoesMobile {
+  position: relative;
+  background-color: var(--azul_claro);
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  /*mudar quando active*/
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.listaSessoesMobile.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.listaSessoesMobile ul {
+  list-style: none;
+  columns: 2;
+  column-gap: 80px;
+  line-height: 36px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.menuDesktop {
+  display: none;
+}
+
+main {
+  padding-top: 80px;
+  min-height: 600px;
+}
+
+.sessaoDesktop {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  /*menu mobile escondido*/
+  .menuMobile {
+    display: none;
+  }
+  .pesquisaMobile {
+    display: none;
+  }
+
+  /*menu destop aparece*/
+  .menuDesktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul_claro);
+    padding: 20px 60px;
+    transition: padding .3s; 
+  }
+
+  /*logo e busca desktop*/
+  .logo-busca {
+    width: 600px;
+    display: flex;
+    gap: 70px;
+    align-items: center;
+  }
+
+  /*input de busca*/
+  .logo-busca input {
+    width: 400px;
+    border-radius: 2px;
+    border: none;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 60px;
+    font-size: 17px;
+  }
+  .opcoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 110px;
+    flex-wrap: nowrap;
+  }
+
+  .btnBuscaDesktop {
+    background-image: url("../imagens-menu/busca-icon.png");
+    height: 30px;
+    width: 40px;
+    background-size: cover;
+    margin-left: -120px;
+
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .btnSessaoDesktop {
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  
+
+  .vTop div {
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .vTop .line1 {
+    transform: rotate(45deg) translate(7px, -3px);
+  }
+  .vTop .line2 {
+    transform: rotate(-45deg) translate(-3px, -5px);
+  }
+
+  .vBottom div {
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .vBottom .line1 {
+    transform: rotate(45deg) translate(-5px, 3px);
+  }
+  .vBottom .line2 {
+    transform: rotate(-45deg) translate(9px, 1px);
+  }
+
+  .btnSessaoDesktop.active .vBottom div {
+    opacity: 0;
+  }
+  .btnSessaoDesktop.active .vTop div {
+    opacity: 1;
+  }
+
+  .sessaoDesktop {
+    background-color: var(--azul_claro);
+    position: fixed;
+    display: block;
+    padding-top: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+    top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*mudar*/
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity, top 0.3s;
+  }
+
+  .sessaoDesktop.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .listaSessaoDesktop {
+    list-style: none;
+    column-gap: 60px;
+    columns: 6;
+  }
+
+  .listaSessaoDesktop li {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    font-size: 15px;
+  }
+
+  ul li:hover{
+    opacity: .8;
+    transition: opacity .3s;
+  }
+  main {
+    padding-top: 120px;
+  }
+}

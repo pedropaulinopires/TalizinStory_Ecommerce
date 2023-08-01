@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "open_sans-regular";
+}
+
+:root {
+  --azul_claro: #527dfa;
+  --azul_escuro: #2849ad;
+  --laranja: #fa886b;
+  --verde_claro: #a6fa39;
+  --verde_escuro: #77ad31;
+}
+
+@font-face {
+  font-family: "open_sans-regular";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "open_sans-semiBold";
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+img{
+    width: 100%;
+    transition: .5s;
+}
+
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .mobile{
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+
+.carrosel{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: auto;
+}
+
+.listBotoes{
+    position: relative;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.listBotoes div{
+    border-radius: 50%;
+    padding: 6px;
+    border: 1px solid white;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+.listBotoes div.active{
+    background-color: rgb(255, 255, 255);
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .listBotoes div:hover{
+        background-color: rgb(255, 255, 255);
+    }
+}
+

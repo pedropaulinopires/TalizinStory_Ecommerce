@@ -17,17 +17,14 @@
 
 @font-face {
   font-family: "open_sans-regular";
-  src: url("OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "open_sans-semiBold";
-  src: url("OpenSans-SemiBold.ttf");
+  src: url("../fonts/OpenSans-SemiBold.ttf");
 }
 
-html {
-  min-height: 900px;
-}
 
 ul {
   font-size: 15px;
@@ -90,7 +87,7 @@ ul {
 
 /*btn busca*/
 .btnBusca {
-  background-image: url("busca-icon.png");
+  background-image: url("../imagens-menu/busca-icon.png");
   height: 30px;
   width: 30px;
   background-size: cover;
@@ -234,7 +231,7 @@ main {
   }
 
   .btnBuscaDesktop {
-    background-image: url("busca-icon.png");
+    background-image: url("../imagens-menu/busca-icon.png");
     height: 30px;
     width: 40px;
     background-size: cover;
