@@ -1,7 +1,5 @@
 package com.talizinstory.ecommerce.domain;
 
-import com.talizinstory.ecommerce.enums.BooleanEnum;
-import com.talizinstory.ecommerce.enums.TipoEnvioEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -9,7 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @AllArgsConstructor
@@ -32,7 +29,7 @@ public class Produto {
     @JoinTable(name = "produto_sessoes", joinColumns = {@JoinColumn(name = "produto_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "sessao.id", referencedColumnName = "id")})
     private List<Sessao> sessoes;
-    
+
 
     @Column(nullable = false)
     private String imagemPrincipal;
