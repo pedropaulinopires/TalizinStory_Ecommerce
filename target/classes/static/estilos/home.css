@@ -1,0 +1,78 @@
+:root {
+    --azul_claro: #527dfa;
+    --azul_escuro: #527DFA;
+    --laranja: #fa886b;
+    --verde_claro: #a6fa39;
+    --verde_escuro: #77ad31;
+  }
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'open_sans-regular', sans-serif;
+  text-decoration: none;
+}
+
+html{
+  min-height:1200px;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "open_sans-regular";
+  src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+  font-family: "open_sans-italic";
+  src: url("../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf");
+}
+.inicio {
+  background-image: url(../img/FundoInicio.png);
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+}
+.imgLike{
+  background-image: url(../img/Like.png);
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 60vw;
+  top: 30px;
+  background-size: cover;
+}
+
+.imgAlert{
+  background-image: url(../img/alert.png);
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 70vw;
+  top: 180px;
+  background-size: cover;
+}
+
+.imgFoguete{
+  background-image: url(../img/Foguete.png);
+  height: 120px;
+  width: 120px;
+  position: relative;
+  left: 85vw;
+  top: 180px;
+  background-size: cover;
+}
+
+.imgGps{
+  background-image: url(../img/gps.png);
+  height: 120px;
+  width: 120px;
+  position: relative;
+  left: 2vw;
+  top: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+

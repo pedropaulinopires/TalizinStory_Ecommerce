@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"  th:href="@{/estilos/home.css}" />
     <link rel="stylesheet" th:href="@{/estilos/menu.css}">
-    <link rel="stylesheet" th:href="@{/estilos/carrosel.css}">
-    <title>Home</title>
+    <link rel="shortcut icon" th:href="@{/img/logo-flutuante.png}" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"></script>
+    <title>Talizin Store</title>
 </head>
 <body>
-    <!--menu mobile-->
-    <header th:replace="~{fragmentos/menuFragmento :: menuMobile}"></header>
-    <div th:replace="~{fragmentos/menuFragmento :: pesquisaMobile}"></div>
-    <!--end menu mobile-->
-
-    <!--menu desktop-->
-    <header th:replace="~{fragmentos/menuFragmento :: menuDesktop}"></header>
-    <div th:replace="~{fragmentos/menuFragmento :: sessaoDesktop}"></div>
-    <!--end menu desktop-->
-
-    <main>
-        <div th:replace="~{ fragmentos/carroselFragmento :: carrosel}"></div>
-        <div th:replace="~{ fragmentos/carroselFragmento :: listBotoes}"></div>
-    </main>
-
-    <script th:src="@{/scripts/menuScripts.js}" defer></script>
-    <script th:src="@{/scripts/carroselScripts.js}" defer></script>
+<header th:replace="~{fragmentos/menuFragmento :: menuDesktop}"></header>
+<main>
+    <section th:replace="~{fragmentos/mainFragmento :: inicio}"></section>
+</main>
+<script th:src="@{/scripts/revealScripts.js}"></script>
+<script th:src="@{/scripts/menuScripts.js}"></script>
 </body>
 </html>
